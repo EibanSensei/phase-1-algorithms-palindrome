@@ -1,9 +1,21 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let wordArray = word.split('')
+  let compareArray = wordArray.slice().reverse()
+  console.log(wordArray)
+
+
+  for (let i = 0; i < wordArray.length; i++) {
+    if (wordArray[i] !== compareArray[i]) {
+      return false
+    }
+  }
+
+  return true
 }
 
 /* 
-  Add your pseudocode here
+  First, i'm going to split my word into an array. 
+  Then I'll iterate through comparing the current index to the same index of the reversed array.
 */
 
 /*
